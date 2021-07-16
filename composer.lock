@@ -2921,6 +2921,10 @@
                 "sonata",
                 "symfony"
             ],
+            "support": {
+                "issues": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/issues",
+                "source": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/tree/3.34.3"
+            },
             "funding": [
                 {
                     "url": "https://github.com/OskarStark",
@@ -10547,5 +10551,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

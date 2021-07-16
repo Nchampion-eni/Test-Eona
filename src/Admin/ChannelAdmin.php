@@ -45,7 +45,7 @@ final class ChannelAdmin extends AbstractAdmin
 
     protected function configureFormFields(FormMapper $form): void
     {
-        $formm
+        $form
             ->add('num')
             ->add('name')
             ;
