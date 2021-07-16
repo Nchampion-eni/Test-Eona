@@ -257,6 +257,9 @@
     "sonata-project/cache": {
         "version": "2.1.1"
     },
+    "sonata-project/cache-bundle": {
+        "version": "3.3.0"
+    },
     "sonata-project/doctrine-extensions": {
         "version": "1.13.0"
     },
@@ -652,6 +655,15 @@
             "config/packages/test/web_profiler.yaml",
             "config/routes/dev/web_profiler.yaml"
         ]
+    },
+    "symfony/web-server-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "dae9b39fd6717970be7601101ce5aa960bf53d9a"
+        }
     },
     "symfony/yaml": {
         "version": "v4.4.26"
