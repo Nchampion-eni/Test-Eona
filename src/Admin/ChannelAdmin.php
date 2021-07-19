@@ -10,6 +10,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\ProxyQueryInterface;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 final class ChannelAdmin extends AbstractAdmin
 {
@@ -36,6 +37,7 @@ final class ChannelAdmin extends AbstractAdmin
         $list
             ->add('num')
             ->add('name')
+            ->add('creation_date')
             ->add(ListMapper::NAME_ACTIONS, null, [
                 'actions' => [
                     'show' => [],
@@ -50,6 +52,9 @@ final class ChannelAdmin extends AbstractAdmin
         $form
             ->add('num')
             ->add('name')
+            ->add('creation_date',DateType::class,[
+                'format' => 'ddMMyyyy',
+            ])
             ;
     }
 
@@ -59,6 +64,9 @@ final class ChannelAdmin extends AbstractAdmin
             ->add('id')
             ->add('num')
             ->add('name')
+            ->add('creation_date',DateType::class,[
+                'format' => 'ddMMyyyy',
+            ])
             ;
     }
 }

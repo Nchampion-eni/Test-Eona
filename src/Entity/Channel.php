@@ -27,6 +27,28 @@ class Channel
      */
     private $name;
 
+    /**
+     * @ORM\Column (type="datetime", nullable=true)
+     */
+private $creation_date;
+
+    /**
+     * @return mixed
+     */
+    public function getCreationDate()
+    {
+        return $this->creation_date;
+    }
+
+    /**
+     * @param mixed $creation_date
+     */
+    public function setCreationDate($creation_date): void
+    {
+        $this->creation_date = $creation_date;
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
