@@ -33,6 +33,27 @@ class Channel
 private $creation_date;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $the_language;
+
+    /**
+     * @return mixed
+     */
+    public function getTheLanguage()
+    {
+        return $this->the_language;
+    }
+
+    /**
+     * @param mixed $the_language
+     */
+    public function setTheLanguage($the_language): void
+    {
+        $this->the_language = $the_language;
+    }
+
+    /**
      * @return mixed
      */
     public function getCreationDate()
