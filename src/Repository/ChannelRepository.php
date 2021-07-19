@@ -18,4 +18,19 @@ class ChannelRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Channel::class);
     }
+
+    public function findByLanguage(string $language)
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT p
+            FROM App\Entity\Channel p
+            WHERE p.the_language = :language
+            ORDER BY p.num ASC'
+        )->setParameter('language', $language);
+
+        // returns an array of Product objects
+        return $query->getResult();
+    }
 }

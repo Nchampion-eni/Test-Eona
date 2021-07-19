@@ -10,6 +10,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\ProxyQueryInterface;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 final class ChannelAdmin extends AbstractAdmin
@@ -53,7 +54,11 @@ final class ChannelAdmin extends AbstractAdmin
         $form
             ->add('num')
             ->add('name')
-            ->add('the_language')
+            ->add('the_language',ChoiceType::class,[
+        'label'=>'Language :',
+        'choices'  => [
+            'Français'=>'Français',
+            'English'=>'English']])
             ->add('creation_date',DateType::class,[
                 'format' => 'ddMMyyyy',
             ])
