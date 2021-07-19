@@ -14,12 +14,14 @@ use Sonata\AdminBundle\Show\ShowMapper;
 final class ChannelAdmin extends AbstractAdmin
 {
 
-    function configureQuery(ProxyQueryInterface $query): ProxyQueryInterface
+    // fonction qui n'affichait pas les entité
+
+   /* function configureQuery(ProxyQueryInterface $query): ProxyQueryInterface
     {
         $query->andWhere('1 = 0');
 
         return $query;
-    }
+    }*/
 
     protected function configureDatagridFilters(DatagridMapper $filter): void
     {
@@ -32,15 +34,16 @@ final class ChannelAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $list): void
     {
         $list
+            ->add('id')
             ->add('num')
             ->add('name')
-            ->add(ListMapper::NAME_ACTIONS, null, [
+            /*->add(ListMapper::NAME_ACTIONS, null, [
                 'actions' => [
                     'show' => [],
                     'edit' => [],
                     'delete' => [],
                 ],
-            ]);
+            ])*/;
     }
 
     protected function configureFormFields(FormMapper $form): void
