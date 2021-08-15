@@ -27,7 +27,7 @@ class ChannelRepository extends ServiceEntityRepository
             'SELECT p
             FROM App\Entity\Channel p
             WHERE p.the_language = :language
-            ORDER BY p.num ASC'
+            ORDER BY p.num'
         )->setParameter('language', $language);
 
         // returns an array of Product objects

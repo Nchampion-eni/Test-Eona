@@ -40,10 +40,7 @@ class HomeController extends AbstractController
             ->getRepository(Channel::class)
             ->findByLanguage($the_language);
 
-        $jsonContent = $serializer->serialize($channelRepository, 'json');
-
-
-        return $this->render('tv/tvFR.html.twig',["Channel"=>$channelRepository]);
+        return $this->json(['Chaîne' => $channelRepository]);
     }
 
     /**
@@ -63,10 +60,8 @@ class HomeController extends AbstractController
             ->getRepository(Channel::class)
             ->findByLanguage($the_language);
 
-        $jsonContent = $serializer->serialize($channelRepository, 'json');
 
-
-        return $this->render('tv/tvEN.html.twig',["Channel"=>$channelRepository]);
+        return $this->json(['Chaîne' => $channelRepository]);
 
     }
 }
