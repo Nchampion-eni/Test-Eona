@@ -22,7 +22,10 @@ class UpperCaseExtension extends AbstractExtension
         ];
     }
 
-    public function upper($v, $r=0)
+    //fonction ralentissant le HomePage
+
+
+    /*public function upper($v, $r=0)
     {
         $z = [];
         $a = \str_split($v);
@@ -65,5 +68,5 @@ class UpperCaseExtension extends AbstractExtension
         }
         $x = \implode($z);
         return $x;
-    }
+    }*/
 }
